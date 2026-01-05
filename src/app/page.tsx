@@ -5,7 +5,8 @@ import { supabase } from '@/lib/supabase'; // 🚨 본인의 supabase 파일 위
 import Link from 'next/link';
 
 export default function Home() {
-  const [posts, setPosts] = useState([]); // 글 목록을 저장할 빈 상자
+  const [posts, setPosts] = useState<any[]>([]); 
+
 
   // 1. 화면이 켜지면 Supabase에서 글을 가져오는 함수
   useEffect(() => {
@@ -56,7 +57,8 @@ export default function Home() {
           <p style={{ textAlign: 'center', color: '#888' }}>아직 등록된 글이 없습니다. 첫 글을 남겨보세요!</p>
         ) : (
           posts.map((post) => (
-            <div key={post.id} style={{ 
+            <div key={post.id} style={{ git push
+
               border: '1px solid #ddd', 
               borderRadius: '10px', 
               padding: '20px', 
